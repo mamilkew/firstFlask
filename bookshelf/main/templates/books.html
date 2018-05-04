@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block container %}
+  <div class="top-pad">
+    <table class="table table-striped">
+      <tbody>
+{% for key, data in books.items() %}
+{# loops for reading nested dictionary #}
+        <tr>
+          <td>{{key | upper}}</td>
+          <td>{{data['author']}}</td>
+          <td>{{data['rating']}}</td>
+        </tr>
+{% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
