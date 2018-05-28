@@ -5,7 +5,7 @@ main = Blueprint('main', __name__, template_folder='templates')
 
 @main.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("nobel.html")
 
 
 @main.route('/books/')
